@@ -1,0 +1,9 @@
+@import "./global/_variables.scss";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $size-footer;
+  background: $bg-page url("../assets/bg-footer.svg");
+}
