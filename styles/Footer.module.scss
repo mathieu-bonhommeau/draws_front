@@ -1,9 +1,14 @@
 @import "./global/_variables.scss";
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: $size-footer;
-  background: $bg-page url("../assets/bg-footer.svg");
+  background: $bg-page url("../assets/images/bg-footer.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 1rem 1rem 1rem;
 }

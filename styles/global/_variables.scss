@@ -1,7 +1,20 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('../../assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../../assets/fonts/Comfortaa/static/Comfortaa-Light.ttf');
+}
+
 /* Background colors */
 $bg-header: #24222E;
 $bg-footer: #F9C22E;
 $bg-page: #1D1D1D;
+
+/* Text colors */
+$text-primary: #F9C22E;
 
 /* Section size */
 $size-header: 7.5vh;

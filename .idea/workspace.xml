@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5957f2fb-ca8a-4a7c-9c79-d5240c0cf1d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bg-footer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Footer.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/global/_reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/global/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/global/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gallery-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/home-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mail-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/menu-icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global/_globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bg-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/bg-footer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Footer.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global/_globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,27 +48,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/matanna/.nvm/versions/node/v14.19.2/lib/node_modules/eslint/bin",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "/home/matanna/Documents/Dev/formation_oc_frontend/Projet_13/argentbank/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/matanna/.nvm/versions/node/v14.19.2/lib/node_modules/eslint/bin&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/matanna/Documents/Dev/formation_oc_frontend/Projet_13/argentbank/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/styles/global" />
       <recent name="$PROJECT_DIR$/pages" />
@@ -91,11 +93,23 @@
       <workItem from="1657112552025" duration="100000" />
       <workItem from="1657115909266" duration="1819000" />
       <workItem from="1657119342706" duration="1214000" />
+      <workItem from="1657272026427" duration="6710000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
