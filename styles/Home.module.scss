@@ -1,0 +1,46 @@
+@import "./global/_variables.scss";
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+
+  .title {
+    color: $color-tertiary;
+    margin-left: 2rem;
+
+    .titleMainText {
+      font-family: 'Permanent Marker', 'sans-serif';
+      font-size: 3.6rem;
+      text-shadow: 2px 2px 2px black;
+      padding-right: 2rem;
+    }
+
+    .titleSubmainText {
+      font-family: 'Comfortaa', 'sans-serif';
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+  }
+
+  .toAboutMeArrow {
+    margin-top: 1rem;
+  }
+}
+
+.mySelectionContainer {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  h2 {
+    margin-left: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+
+
+

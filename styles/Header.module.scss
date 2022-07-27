@@ -3,15 +3,16 @@
 .header {
   position: absolute;
   top: 0;
+  z-index: 1;
   width: 100%;
   height: $size-header;
-  background: $bg-header;
-  color: $text-primary;
+  background: $color-secondary;
+  color: $color-tertiary;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: $shadow;
 }
 
 .logoContainer {

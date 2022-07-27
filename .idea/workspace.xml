@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5957f2fb-ca8a-4a7c-9c79-d5240c0cf1d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/avatar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gallery-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/mail-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/menu-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/maskSliderImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/nameSliderImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/Home.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/Slider.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bg-footer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/bg-footer.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Footer.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Footer.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Page.module.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/global/_globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global/_globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/global/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global/_variables.scss" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/matanna/.nvm/versions/node/v14.19.2/lib/node_modules/eslint/bin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/matanna/Documents/Dev/Projets_perso/projet_lilou/lilou_project_front&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -93,7 +93,10 @@
       <workItem from="1657112552025" duration="100000" />
       <workItem from="1657115909266" duration="1819000" />
       <workItem from="1657119342706" duration="1214000" />
-      <workItem from="1657272026427" duration="6710000" />
+      <workItem from="1657272026427" duration="6786000" />
+      <workItem from="1658768204183" duration="843000" />
+      <workItem from="1658828317500" duration="2802000" />
+      <workItem from="1658906655817" duration="16650000" />
     </task>
     <servers />
   </component>

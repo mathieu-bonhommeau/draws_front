@@ -8,14 +8,18 @@
   src: url('../../assets/fonts/Comfortaa/static/Comfortaa-Light.ttf');
 }
 
-/* Background colors */
-$bg-header: #24222E;
-$bg-footer: #F9C22E;
-$bg-page: #1D1D1D;
-
-/* Text colors */
-$text-primary: #F9C22E;
+/* colors */
+$color-secondary: #24222E;
+$color-tertiary: #F9C22E;
+$color-primary: #1D1D1D;
+$color-quaternary: #53B3CB;
 
 /* Section size */
 $size-header: 7.5vh;
 $size-footer: 11.5vh;
+
+/* radius */
+$arrow-radius: 5px;
+
+/* shadow */
+$shadow: 1px 2px 4px rgba(0,0,0,0.5);
