@@ -1,0 +1,5 @@
+export {default as eye} from './eye.png'
+export {default as head} from './head.png'
+export {default as mikasa} from './mikasa.png'
+export {default as room} from './room.png'
+export {default as titan} from './titan.png'
