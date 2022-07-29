@@ -1,21 +1,86 @@
+@import "./global/_variables.scss";
+
 .slider {
-  //left: -2rem;
   z-index: 1;
-  height: 40vh;
-  background: #fff;
+  height: 35vh;
   display: flex;
-  transform: translateX(-2*70vw+15vw);
+  transform: translateX($center-slider);
 }
 
 .drawItemContainer {
-  width: 70vw;
-  //height: 100%;
+  width: 250px;
+  position: relative;
   flex-shrink: 0;
 
+  &:nth-of-type(1n) {
+    transform: perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg);
+    transition: transform ease 1s, opacity ease 1s;
+
+    &.next {
+      transform: translateX(250px) perspective(200px) translateZ(-100px) translateX(10px) rotateY(-32deg);
+    }
+  }
+
+  &:nth-of-type(2n) {
+    transform: perspective(200px) translateZ(-100px) translateX(10px) rotateY(-35deg);
+    transition: transform ease 1s;
+
+    &.next {
+      transform: translateX(250px) perspective(200px) translateZ(-25px);
+    }
+  }
+
+  &:nth-of-type(3n) {
+    transform: perspective(200px) translateZ(-25px);
+    transition: transform ease 1s;
+
+    &.next {
+      transform: translateX(250px) perspective(200px) translateZ(-100px) translateX(-10px) rotateY(32deg);
+    }
+  }
+
+  &:nth-of-type(4n) {
+    transform: perspective(200px) translateZ(-100px) translateX(-10px) rotateY(35deg);
+    transition: transform ease 1s;
+
+    &.next {
+      transform: translateX(250px) perspective(200px) translateZ(-250px)  translateX(-305px) rotateY(100deg);
+    }
+  }
+
+  &:nth-of-type(5n) {
+    transform: perspective(200px) translateZ(-250px)  translateX(-305px) rotateY(100deg);
+    transition: transform ease 1s, opacity ease 1s;
+
+    &.next {
+      transform: perspective(200px) translateZ(-300px) translateX(-315px) rotateY(124deg);
+      opacity: 0;
+    }
+  }
+
   .draw {
-    width: 92%;
-    height: 100%;
+    position: absolute;
+    height: 35vh;
     mask-image: url("../assets/images/maskSliderImage.png");
-    mask-size: cover;
+    mask-size: 93% 100%;
+    mask-repeat: no-repeat;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .drawName {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 31%;
+
+    .name {
+      position: absolute;
+      transform: rotateZ(-90deg) translateY(20px) translateX(75px);
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: white;
+    }
   }
 }
+
