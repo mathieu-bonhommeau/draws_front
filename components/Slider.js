@@ -10,7 +10,8 @@ const initialStyleForPosition = [
     position: 0,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
+        "perspective(200px) translateZ(-300px) translateX(-790px) rotateY(-200deg)",
+      opacity: 0,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -18,15 +19,17 @@ const initialStyleForPosition = [
     position: 1,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
-      transition: "transform ease 1s, opacity ease 1s",
+        "perspective(200px) translateZ(-375px) translateX(-550px) rotateY(-190deg)",
+      opacity: 0,
+      /*transition: "transform ease 1s, opacity ease 1s",*/
     },
   },
   {
     position: 2,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
+        "perspective(200px) translateZ(-250px) translateX(-700px) rotateY(-20deg)",
+      opacity: 1,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -34,7 +37,8 @@ const initialStyleForPosition = [
     position: 3,
     style: {
       transform:
-        "perspective(200px) translateZ(-100px) translateX(10px) rotateY(-35deg)",
+        "perspective(200px) translateZ(-100px) translateX(-305px) rotateY(-10deg)",
+      opacity: 1,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -42,6 +46,7 @@ const initialStyleForPosition = [
     position: 4,
     style: {
       transform: "perspective(200px) translateZ(-25px)",
+      opacity: 1,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -49,7 +54,8 @@ const initialStyleForPosition = [
     position: 5,
     style: {
       transform:
-        "perspective(200px) translateZ(-100px) translateX(-10px) rotateY(35deg)",
+        "perspective(200px) translateZ(-100px) translateX(305px) rotateY(10deg)",
+      opacity: 1,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -57,15 +63,16 @@ const initialStyleForPosition = [
     position: 6,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px)  translateX(-305px) rotateY(100deg)",
+        "perspective(200px) translateZ(-250px) translateX(700px) rotateY(20deg)",
+      opacity: 1,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
   {
     position: 7,
     style: {
-      transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
+      transform: "perspective(200px) translateZ(-450px) rotateY(180deg)",
+      opacity: 0,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -73,7 +80,8 @@ const initialStyleForPosition = [
     position: 8,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
+        "perspective(200px) translateZ(-375px) translateX(550px) rotateY(190deg)",
+      opacity: 0,
       transition: "transform ease 1s, opacity ease 1s",
     },
   },
@@ -81,8 +89,9 @@ const initialStyleForPosition = [
     position: 9,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(305px) rotateY(-100deg)",
-      transition: "transform ease 1s, opacity ease 1s",
+        "perspective(200px) translateZ(-300px) translateX(790px) rotateY(200deg)",
+      opacity: 0,
+      /*transition: "transform ease 1s, opacity ease 1s",*/
     },
   },
 ];
@@ -116,17 +125,6 @@ const Slider = (props) => {
   const slider = useRef();
 
   const prevClick = (e) => {
-    setStyleByPosition(
-      [...styleByPosition].map((e) => {
-        return {
-          ...e,
-          style: {
-            ...e.style,
-            transform: `translateX(-250px) ${e.style.transform}`,
-          },
-        };
-      })
-    );
     setSliderState(
       [...sliderState].map((e) => {
         return {
@@ -138,18 +136,6 @@ const Slider = (props) => {
   };
 
   const nextClick = (e) => {
-    setStyleByPosition(
-      [...styleByPosition].map((e) => {
-        return {
-          ...e,
-          style: {
-            ...e.style,
-            transform:
-              e.position === 0 ? "" : `translateX(250px) ${e.style.transform}`,
-          },
-        };
-      })
-    );
     setSliderState(
       [...sliderState].map((e) => {
         return {
