@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Style from "../styles/Home.module.scss";
 import React from "react";
-import Arrow from "../assets/images/arrow.png";
+import Arrow from "../assets/images/arrow-right.png";
 import Image from "next/image";
 import Slider from "../components/Slider";
 

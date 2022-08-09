@@ -33,11 +33,19 @@
 
     .name {
       position: absolute;
-      transform: rotateZ(-90deg) translateY(20px) translateX(75px);
+      transform-origin: left;
+      transform: rotateZ(-90deg) translateY(55px) translateX(35px);
       font-size: 1.6rem;
       text-transform: uppercase;
       color: white;
     }
   }
+}
+
+.prevNextButtons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
 }
 

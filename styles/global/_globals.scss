@@ -121,6 +121,7 @@ h2 {
   background: $color-secondary;
   border-radius: $arrow-radius;
   box-shadow: $shadow;
+  border: none;
 }
 
 @media (max-width: 600px) {
@@ -129,17 +130,3 @@ h2 {
     flex-direction: column;
   }
 }
-
-/*
-.draw1 {
-  background: red;
-}
-.draw2 {
-  background: blue;
-}
-.draw4 {
-  background: yellow;
-}
-.draw5 {
-  background: pink;
-}*/

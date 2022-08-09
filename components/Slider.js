@@ -4,6 +4,8 @@ import Style from "../styles/Slider.module.scss";
 import NameBorder from "../assets/images/nameSliderImage.png";
 import Image from "next/image";
 import datas from "../mockDatas/datas.js";
+import ArrowRight from "../assets/images/arrow-right.png";
+import ArrowLeft from "../assets/images/arrow-left.png";
 
 const initialStyleForPosition = [
   {
@@ -12,16 +14,15 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-300px) translateX(-790px) rotateY(-200deg)",
       opacity: 0,
-      transition: "transform ease 1s, opacity ease 1s",
     },
   },
   {
     position: 1,
     style: {
       transform:
-        "perspective(200px) translateZ(-375px) translateX(-550px) rotateY(-190deg)",
+        "perspective(200px) translateZ(-375px) translateX(-550px) rotateY(-0deg)",
       opacity: 0,
-      /*transition: "transform ease 1s, opacity ease 1s",*/
+      transition: "transform ease 0.5s, opacity 0.3s ease",
     },
   },
   {
@@ -30,7 +31,7 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-250px) translateX(-700px) rotateY(-20deg)",
       opacity: 1,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 0.5s, opacity 0.3s ease 0.2s",
     },
   },
   {
@@ -39,7 +40,7 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-100px) translateX(-305px) rotateY(-10deg)",
       opacity: 1,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 0.5s",
     },
   },
   {
@@ -47,7 +48,7 @@ const initialStyleForPosition = [
     style: {
       transform: "perspective(200px) translateZ(-25px)",
       opacity: 1,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 0.5s",
     },
   },
   {
@@ -56,7 +57,7 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-100px) translateX(305px) rotateY(10deg)",
       opacity: 1,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 0.5s",
     },
   },
   {
@@ -65,15 +66,15 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-250px) translateX(700px) rotateY(20deg)",
       opacity: 1,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 0.5s, opacity 0.3s ease 0.2s",
     },
   },
   {
     position: 7,
     style: {
-      transform: "perspective(200px) translateZ(-450px) rotateY(180deg)",
+      transform: "perspective(200px) translateZ(-450px) rotateY(40deg)",
       opacity: 0,
-      transition: "transform ease 1s, opacity ease 1s",
+      transition: "transform ease 1s, opacity ease 0.2s",
     },
   },
   {
@@ -82,7 +83,6 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-375px) translateX(550px) rotateY(190deg)",
       opacity: 0,
-      transition: "transform ease 1s, opacity ease 1s",
     },
   },
   {
@@ -91,7 +91,6 @@ const initialStyleForPosition = [
       transform:
         "perspective(200px) translateZ(-300px) translateX(790px) rotateY(200deg)",
       opacity: 0,
-      /*transition: "transform ease 1s, opacity ease 1s",*/
     },
   },
 ];
@@ -102,7 +101,7 @@ const Slider = (props) => {
   const [styleByPosition, setStyleByPosition] = useState(
     initialStyleForPosition
   );
-  console.log(styleByPosition);
+
   useEffect(() => {
     const adaptDatasForSlider = [
       datas[3],
@@ -179,8 +178,19 @@ const Slider = (props) => {
               );
             })}
       </div>
-      <button onClick={prevClick}>Prev</button>
-      <button onClick={nextClick}>Next</button>
+      <div className={Style.prevNextButtons}>
+        <button className="arrow-link" onClick={nextClick}>
+          <Image
+            src={ArrowLeft}
+            height={20}
+            width={20}
+            alt="Image précédente"
+          />
+        </button>
+        <button className="arrow-link" onClick={prevClick}>
+          <Image src={ArrowRight} height={20} width={20} alt="Image suivante" />
+        </button>
+      </div>
     </>
   );
 };
