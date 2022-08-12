@@ -39,6 +39,26 @@
       color: white;
     }
   }
+
+  .drawActions {
+    position: absolute;
+    z-index: 1001;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    bottom: 30px;
+    left: 30px;
+    font-size: 1.25rem;
+
+    & > * {
+      width: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      color: $color-tertiary;
+    }
+  }
 }
 
 .prevNextButtons {

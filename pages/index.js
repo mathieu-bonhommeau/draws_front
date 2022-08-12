@@ -3,7 +3,10 @@ import Style from "../styles/Home.module.scss";
 import React from "react";
 import Arrow from "../assets/images/arrow-right.png";
 import Image from "next/image";
+import DrawHomeSliderItem from "../components/DrawHomeSliderItem";
 import Slider from "../components/Slider";
+import CommentsHomeSlider from "../components/CommentsHomeSlider";
+import {mockHomeDraws, mockHomeComments} from "../mockDatas/datas.js";
 
 export default function Home() {
   return (
@@ -20,7 +23,8 @@ export default function Home() {
         </div>
         <div className={Style.mySelectionContainer}>
           <h2>Ma sélection</h2>
-          <Slider />
+          <Slider datas={mockHomeDraws} sliderType="draws" />
+          <Slider datas={mockHomeComments} sliderType="comments" />
         </div>
       </main>
     </div>

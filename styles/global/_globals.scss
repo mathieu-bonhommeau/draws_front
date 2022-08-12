@@ -122,6 +122,10 @@ h2 {
   border-radius: $arrow-radius;
   box-shadow: $shadow;
   border: none;
+
+  &.opacity50 {
+    @include lowerOpacity($color-secondary, 0.85)
+  }
 }
 
 @media (max-width: 600px) {

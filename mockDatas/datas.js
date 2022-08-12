@@ -1,4 +1,4 @@
-const datas = [
+export const mockHomeDraws = [
   {
     id: "101",
     name: "Mikasa",
@@ -26,4 +26,40 @@ const datas = [
   },
 ];
 
-export default datas;
+export const mockHomeComments = [
+  {
+    id: "11",
+    name: "Mat",
+    picture: "profil1.png",
+    comment: "Lorem ipsum dolor sit amet",
+    stars: 4
+  },
+  {
+    id: "12",
+    name: "Julie",
+    picture: "profil2.png",
+    comment: "Ea ipsam laboriosam recusandae voluptatibus?",
+    stars: 3
+  },
+  {
+    id: "13",
+    name: "matanna",
+    picture: "profil3.png",
+    comment: "Animi laborum nam quaerat sequi!",
+    stars: 5
+  },
+  {
+    id: "14",
+    name: "myapiapia",
+    picture: "profil4.png",
+    comment: "Obcaecati quos ratione tempora totam.",
+    stars: 4
+  },
+  {
+    id: "15",
+    name: "monpseudo",
+    picture: "profil5.png",
+    comment: "Aspernatur porro possimus repellat suscipit?",
+    stars: 2
+  },
+];

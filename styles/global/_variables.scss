@@ -9,7 +9,7 @@
 }
 
 /* colors */
-$color-secondary: #24222E;
+$color-secondary: rgba(36, 34, 46, 1);
 $color-tertiary: #F9C22E;
 $color-primary: #1D1D1D;
 $color-quaternary: #53B3CB;
@@ -26,3 +26,9 @@ $shadow: 1px 2px 4px rgba(0,0,0,0.5);
 
 /* space */
 $center-slider: calc(-4*250px + (100vw - 250px) / 2);
+
+/* mixins */
+@mixin lowerOpacity($color, $opacity) {
+  background: $color;
+  opacity: $opacity;
+}
