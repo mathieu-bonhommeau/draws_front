@@ -11,8 +11,6 @@ const initialStyleForPosition = [
   {
     position: 0,
     style: {
-      transform:
-        "perspective(200px) translateZ(-300px) translateX(-790px) rotateY(-200deg)",
       opacity: 0,
     },
   },
@@ -20,7 +18,7 @@ const initialStyleForPosition = [
     position: 1,
     style: {
       transform:
-        "perspective(200px) translateZ(-375px) translateX(-550px) rotateY(-0deg)",
+        "perspective(200px) translateZ(-375px) translateX(-550px)",
       opacity: 0,
       transition: "transform ease 0.5s, opacity 0.3s ease",
     },
@@ -29,7 +27,7 @@ const initialStyleForPosition = [
     position: 2,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(-700px) rotateY(-20deg)",
+        "perspective(200px) translateZ(-250px) translateX(-800px) rotateY(-20deg)",
       opacity: 1,
       transition: "transform ease 0.5s, opacity 0.3s ease 0.2s",
     },
@@ -38,7 +36,7 @@ const initialStyleForPosition = [
     position: 3,
     style: {
       transform:
-        "perspective(200px) translateZ(-100px) translateX(-305px) rotateY(-10deg)",
+        "perspective(200px) translateZ(-100px) translateX(-355px) rotateY(-10deg)",
       opacity: 1,
       transition: "transform ease 0.5s",
     },
@@ -55,7 +53,7 @@ const initialStyleForPosition = [
     position: 5,
     style: {
       transform:
-        "perspective(200px) translateZ(-100px) translateX(305px) rotateY(10deg)",
+        "perspective(200px) translateZ(-100px) translateX(355px) rotateY(10deg)",
       opacity: 1,
       transition: "transform ease 0.5s",
     },
@@ -64,7 +62,7 @@ const initialStyleForPosition = [
     position: 6,
     style: {
       transform:
-        "perspective(200px) translateZ(-250px) translateX(700px) rotateY(20deg)",
+        "perspective(200px) translateZ(-250px) translateX(800px) rotateY(20deg)",
       opacity: 1,
       transition: "transform ease 0.5s, opacity 0.3s ease 0.2s",
     },
@@ -80,16 +78,12 @@ const initialStyleForPosition = [
   {
     position: 8,
     style: {
-      transform:
-        "perspective(200px) translateZ(-375px) translateX(550px) rotateY(190deg)",
       opacity: 0,
     },
   },
   {
     position: 9,
     style: {
-      transform:
-        "perspective(200px) translateZ(-300px) translateX(790px) rotateY(200deg)",
       opacity: 0,
     },
   },
@@ -165,8 +159,10 @@ const Slider = (props) => {
                     <Image
                       src={`/mockPictures/${e.picture}`}
                       alt={e.name}
-                      width={250}
-                      height={350}
+                      width="100%"
+                      height="100%"
+                      layout="fill"
+                      objectFit="cover"
                     />
                   </div>
                   <div className={Style.drawName}>

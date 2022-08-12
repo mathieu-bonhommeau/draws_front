@@ -2,26 +2,25 @@
 
 .slider {
   z-index: 1;
-  height: 35vh;
-  /*display: flex;*/
+  height: 40vh;
   position: relative;
   transform: translateX($center-slider);
 }
 
 .drawItemContainer {
-  width: 250px;
-  height: 35vh;
+  width: 277px;
+  height: 40vh;
   left: calc(1000px);
   position: absolute;
   flex-shrink: 0;
 
   .draw {
     position: absolute;
-    height: 35vh;
+    height: 100%;
+    width: 100%;
     mask-image: url("../assets/images/maskSliderImage.png");
-    mask-size: 93% 100%;
+    mask-size: 97% 100%;
     mask-repeat: no-repeat;
-    object-fit: cover;
     z-index: 1;
   }
 
@@ -29,12 +28,12 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 31%;
+    width: 28%;
 
     .name {
       position: absolute;
       transform-origin: left;
-      transform: rotateZ(-90deg) translateY(55px) translateX(35px);
+      transform: rotateZ(-90deg) translateY(58px) translateX(35px);
       font-size: 1.6rem;
       text-transform: uppercase;
       color: white;
