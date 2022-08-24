@@ -3,12 +3,14 @@ import Style from "../styles/Home.module.scss";
 import React from "react";
 import Arrow from "../assets/images/arrow-right.png";
 import Image from "next/image";
-import DrawHomeSliderItem from "../components/DrawHomeSliderItem";
 import Slider from "../components/Slider";
-import CommentsHomeSlider from "../components/CommentsHomeSlider";
-import {mockHomeDraws, mockHomeComments} from "../mockDatas/datas.js";
+import { mockHomeDraws, mockHomeComments } from "../mockDatas/datas.js";
+import DrawHomeSlider from "../components/DrawHomeSlider";
+import CommentHomeSlider from "../components/CommentHomeSlider";
 
 export default function Home() {
+  //Get static props pour récupérer les données via l'api (mockHomeDraws, mockHomeComments)
+
   return (
     <div className="container">
       <main>
@@ -21,10 +23,13 @@ export default function Home() {
             <Image src={Arrow} height={20} width={20} alt="A propos de moi" />
           </a>
         </div>
-        <div className={Style.mySelectionContainer}>
+        <div className={Style.sliderContainer}>
           <h2>Ma sélection</h2>
-          <Slider datas={mockHomeDraws} sliderType="draws" />
-          <Slider datas={mockHomeComments} sliderType="comments" />
+          <Slider datas={mockHomeDraws} sliderType="draws" itemComponent={<DrawHomeSlider />}/>
+        </div>
+        <div className={Style.sliderContainer}>
+          <h2>Dites moi...</h2>
+          <Slider datas={mockHomeComments} sliderType="comments" itemComponent={<CommentHomeSlider />}/>
         </div>
       </main>
     </div>
