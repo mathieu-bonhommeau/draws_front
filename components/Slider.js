@@ -5,23 +5,15 @@ import Image from "next/image";
 import ArrowLeft from "../assets/images/arrow-left.png";
 import ArrowRight from "../assets/images/arrow-right.png";
 import DrawHomeSlider from "./DrawHomeSlider";
-import CommentHomeSlider from "./CommentHomeSlider";
 
 const Slider = ({ datas, itemComponent }) => {
   const [sliderState, setSliderState] = useState([]);
-
-  const [itemPositionXY, setItemPositionXY] = useState({
-    start: null,
-    inProgress: null,
-    end: null
-  })
-
   const [touchPosition, setTouchPosition] = useState({
     start: null,
-    inProgress: null,
-    end: null
+    inProgress: null
   })
 
+  const slider = useRef();
 
   // A remplacer par get staticProps ou une autre en fonction du besoin
   // useEffect pour adapter le tableau de données pour le slider
@@ -44,27 +36,11 @@ const Slider = ({ datas, itemComponent }) => {
     );
   }, []);
 
-
-  useEffect(() => {
-    setItemPositionXY({
-      ...itemPositionXY,
-      inProgress: (touchPosition.inProgress - touchPosition.start)
-    })
-  }, [touchPosition.inProgress])
-
-
-  const slider = useRef();
-
   const handleTouchStart = (e) => {
     setTouchPosition({
       ...touchPosition,
       start: e.changedTouches[0].pageX
     })
-    setItemPositionXY({
-      ...itemPositionXY,
-      start: e.target.getBoundingClientRect().x
-    })
-
   }
 
   const handleTouchMove = (e) => {
@@ -74,16 +50,15 @@ const Slider = ({ datas, itemComponent }) => {
     })
   }
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = () => {
     if (touchPosition.inProgress < touchPosition.start) {
       prevClick()
     } else {
       nextClick()
     }
-
   }
 
-  const prevClick = (e) => {
+  const prevClick = () => {
     setSliderState(
       [...sliderState].map((e) => {
         return {
@@ -94,7 +69,7 @@ const Slider = ({ datas, itemComponent }) => {
     );
   };
 
-  const nextClick = (e) => {
+  const nextClick = () => {
     setSliderState(
       [...sliderState].map((e) => {
         return {
@@ -103,7 +78,6 @@ const Slider = ({ datas, itemComponent }) => {
         };
       })
     );
-    console.log(sliderState)
   };
 
   // Génération du slider en fonction du composant récupérer en props
@@ -115,8 +89,6 @@ const Slider = ({ datas, itemComponent }) => {
         ...itemComponent.props,
         item: e,
         index: i,
-        touchEvents: {handleTouchMove, handleTouchStart, handleTouchEnd},
-        itemPositionXY
       }
     }
   };
@@ -124,8 +96,15 @@ const Slider = ({ datas, itemComponent }) => {
   return (
     <>
       <div
-        className={`${Style.slider} `}
+        className={
+          `${Style.slider} 
+           ${itemComponent.type.name === "DrawHomeSlider" && Style.sliderDraw} 
+           ${itemComponent.type.name === "CommentHomeSlider" && Style.sliderComment}`
+        }
         ref={slider}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {sliderState === []
           ? ""
@@ -133,7 +112,7 @@ const Slider = ({ datas, itemComponent }) => {
               return generateSlider(e, i);
             })}
       </div>
-      <div className={Style.prevNextButtons}>
+      {/*<div className={Style.prevNextButtons}>
         <button className="arrow-link" onClick={nextClick}>
           <Image
             src={ArrowLeft}
@@ -145,7 +124,7 @@ const Slider = ({ datas, itemComponent }) => {
         <button className="arrow-link" onClick={prevClick}>
           <Image src={ArrowRight} height={20} width={20} alt="Image suivante" />
         </button>
-      </div>
+      </div>*/}
     </>
   );
 };

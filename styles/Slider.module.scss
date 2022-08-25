@@ -2,7 +2,6 @@
 
 .slider {
   z-index: 1;
-  height: 40vh;
   position: relative;
   transform: translateX($center-slider);
 
@@ -10,7 +9,7 @@
     height: 40vh;
   }
   &.sliderComment {
-    height: 10vh;
+    height: 15vh;
   }
 }
 

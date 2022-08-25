@@ -1,4 +1,3 @@
-
 const generateStyleForSliderItem = ({transform, opacity, transition}) => {
 
     const generateTransform = ({perspective, translate, rotate}) => {
@@ -33,7 +32,6 @@ const generateStyleForSliderItem = ({transform, opacity, transition}) => {
         opacity: opacity ? opacity : 0,
         transition: transition ? generateTransition(transition) : ""
         }
-
 }
 
 export default generateStyleForSliderItem
