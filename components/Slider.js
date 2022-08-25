@@ -48,7 +48,7 @@ const Slider = ({ datas, itemComponent }) => {
   useEffect(() => {
     setItemPositionXY({
       ...itemPositionXY,
-      inProgress: (touchPosition.inProgress - touchPosition.start)/* + itemPositionXY.start*/
+      inProgress: (touchPosition.inProgress - touchPosition.start)
     })
   }, [touchPosition.inProgress])
 
@@ -74,10 +74,16 @@ const Slider = ({ datas, itemComponent }) => {
     })
   }
 
-  console.log(itemPositionXY, '1')
-  console.log(touchPosition, '2')
+  const handleTouchEnd = (e) => {
+    if (touchPosition.inProgress < touchPosition.start) {
+      prevClick()
+    } else {
+      nextClick()
+    }
 
-  /*const prevClick = (e) => {
+  }
+
+  const prevClick = (e) => {
     setSliderState(
       [...sliderState].map((e) => {
         return {
@@ -86,9 +92,9 @@ const Slider = ({ datas, itemComponent }) => {
         };
       })
     );
-  };*/
+  };
 
-  /*const nextClick = (e) => {
+  const nextClick = (e) => {
     setSliderState(
       [...sliderState].map((e) => {
         return {
@@ -97,7 +103,8 @@ const Slider = ({ datas, itemComponent }) => {
         };
       })
     );
-  };*/
+    console.log(sliderState)
+  };
 
   // Génération du slider en fonction du composant récupérer en props
   const generateSlider = (e, i) => {
@@ -108,8 +115,8 @@ const Slider = ({ datas, itemComponent }) => {
         ...itemComponent.props,
         item: e,
         index: i,
-        touchEvents: {handleTouchMove, handleTouchStart},
-        itemPositionXY: itemPositionXY
+        touchEvents: {handleTouchMove, handleTouchStart, handleTouchEnd},
+        itemPositionXY
       }
     }
   };
@@ -126,7 +133,7 @@ const Slider = ({ datas, itemComponent }) => {
               return generateSlider(e, i);
             })}
       </div>
-      {/*<div className={Style.prevNextButtons}>
+      <div className={Style.prevNextButtons}>
         <button className="arrow-link" onClick={nextClick}>
           <Image
             src={ArrowLeft}
@@ -138,7 +145,7 @@ const Slider = ({ datas, itemComponent }) => {
         <button className="arrow-link" onClick={prevClick}>
           <Image src={ArrowRight} height={20} width={20} alt="Image suivante" />
         </button>
-      </div>*/}
+      </div>
     </>
   );
 };
