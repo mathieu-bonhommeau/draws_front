@@ -8,14 +8,23 @@ const Header = (props) => {
   return (
     <header className={Style.header}>
       <div className={Style.logoContainer}>
-        <Image src={logo} alt="Logo Lilou draws" width={30} height={30} />
+        <div className={Style.imgContainer}>
+          <Image src={logo} alt="Logo Lilou draws" width={60} height={60} />
+        </div>
         <div className={Style.logoText}>
           <span className={Style.logoMainText}>LILOU</span>
           <span className={Style.logoSubmainText}>Draws</span>
         </div>
       </div>
       <div>
-        <Image src={avatar} alt="Avatar user account" width={30} height={30} />
+        <div className={Style.imgContainer}>
+          <Image
+            src={avatar}
+            alt="Avatar user account"
+            width={60}
+            height={60}
+          />
+        </div>
       </div>
     </header>
   );

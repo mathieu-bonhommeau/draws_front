@@ -10,8 +10,8 @@ const Slider = ({ datas, itemComponent }) => {
   const [sliderState, setSliderState] = useState([]);
   const [touchPosition, setTouchPosition] = useState({
     start: null,
-    inProgress: null
-  })
+    inProgress: null,
+  });
 
   const slider = useRef();
 
@@ -34,29 +34,29 @@ const Slider = ({ datas, itemComponent }) => {
         };
       })
     );
-  }, []);
+  }, [datas]);
 
   const handleTouchStart = (e) => {
     setTouchPosition({
       ...touchPosition,
-      start: e.changedTouches[0].pageX
-    })
-  }
+      start: e.changedTouches[0].pageX,
+    });
+  };
 
   const handleTouchMove = (e) => {
     setTouchPosition({
       ...touchPosition,
-      inProgress: e.changedTouches[0].pageX
-    })
-  }
+      inProgress: e.changedTouches[0].pageX,
+    });
+  };
 
   const handleTouchEnd = () => {
     if (touchPosition.inProgress < touchPosition.start) {
-      prevClick()
+      prevClick();
     } else {
-      nextClick()
+      nextClick();
     }
-  }
+  };
 
   const prevClick = () => {
     setSliderState(
@@ -82,25 +82,26 @@ const Slider = ({ datas, itemComponent }) => {
 
   // Génération du slider en fonction du composant récupérer en props
   const generateSlider = (e, i) => {
-    return itemComponent = {
+    return (itemComponent = {
       ...itemComponent,
       key: i,
       props: {
         ...itemComponent.props,
         item: e,
         index: i,
-      }
-    }
+      },
+    });
   };
 
   return (
     <>
       <div
-        className={
-          `${Style.slider} 
+        className={`${Style.slider} 
            ${itemComponent.type.name === "DrawHomeSlider" && Style.sliderDraw} 
-           ${itemComponent.type.name === "CommentHomeSlider" && Style.sliderComment}`
-        }
+           ${
+             itemComponent.type.name === "CommentHomeSlider" &&
+             Style.sliderComment
+           }`}
         ref={slider}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}

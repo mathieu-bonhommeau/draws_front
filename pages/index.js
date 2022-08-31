@@ -4,13 +4,12 @@ import React from "react";
 import Arrow from "../assets/images/arrow-right.png";
 import Image from "next/image";
 import Slider from "../components/Slider";
-import { mockHomeDraws, mockHomeComments } from "../mockDatas/datas.js";
 import DrawHomeSlider from "../components/DrawHomeSlider";
 import CommentHomeSlider from "../components/CommentHomeSlider";
+import { fetchComments, fetchDraws } from "../mockDatas/mockApi";
 
-export default function Home() {
-  //Get static props pour récupérer les données via l'api (mockHomeDraws, mockHomeComments)
-
+export default function Home({ draws, comments }) {
+  console.log(comments);
   return (
     <div className="container">
       <main>
@@ -25,13 +24,37 @@ export default function Home() {
         </div>
         <div className={Style.sliderContainer}>
           <h2>Ma sélection</h2>
-          <Slider datas={mockHomeDraws} sliderType="draws" itemComponent={<DrawHomeSlider />}/>
+          <Slider
+            datas={draws}
+            sliderType="draws"
+            itemComponent={<DrawHomeSlider />}
+          />
         </div>
         <div className={Style.sliderContainer}>
           <h2>Dites moi...</h2>
-          <Slider datas={mockHomeComments} sliderType="comments" itemComponent={<CommentHomeSlider />}/>
+          <Slider
+            datas={comments}
+            sliderType="comments"
+            itemComponent={<CommentHomeSlider />}
+          />
         </div>
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const draws = await fetchDraws();
+  const fetchComments = await fetch("https://127.0.0.1:8000/comment");
+  const comments = await fetchComments.json();
+  // Filtrer comments pour en avoir que 5
+  console.log(comments);
+
+  return {
+    props: {
+      draws,
+      comments,
+    },
+    revalidate: 5,
+  };
 }

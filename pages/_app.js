@@ -1,12 +1,12 @@
 import "../styles/global/main.scss";
-import { Footer, Header } from "../components";
+import Container from "../components/Container";
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Container>
+        <Component {...pageProps} />
+      </Container>
     </div>
   );
 }
