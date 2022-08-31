@@ -47,13 +47,16 @@ export async function getStaticProps() {
   const draws = await fetchDraws();
   const fetchComments = await fetch("https://127.0.0.1:8000/comment");
   const comments = await fetchComments.json();
+  comments.sort((a, b) => b.stars - a.stars)
+  comments.sort((a, b) => a.createdAt - b.createdAt)
+
   // Filtrer comments pour en avoir que 5
   console.log(comments);
 
   return {
     props: {
       draws,
-      comments,
+      comments: comments.slice(0,5),
     },
     revalidate: 5,
   };
